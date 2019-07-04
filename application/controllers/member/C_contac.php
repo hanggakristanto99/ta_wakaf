@@ -13,6 +13,7 @@ class C_contac extends CI_Controller {
 		// }
 
 		$data['username'] = $this->session->userdata('username');
+		$this->load->view('user/header');
 		$this->load->view('user/contac', $data);
 	}
 

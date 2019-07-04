@@ -14,6 +14,7 @@ class C_detail_berita extends CI_Controller {
 
 		$data['username'] = $this->session->userdata('username');
 		$data['wakaf']=$this->M_detail_berita->tampil_data();
+		$this->load->view('user/header');
 		$this->load->view('user/detail_berita', $data);
 	}
 

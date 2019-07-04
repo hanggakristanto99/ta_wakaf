@@ -98,8 +98,7 @@ $this->load->view('user/header');
 								<h2>Wakaf <span>Sekarang</span></h2>
 								<a href="<?php echo site_url('member/c_halaman_login'); ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Wakaf</a>
 								<!-- <button type="button" class="btn btn-primary btn-lg">Wakaf</button> -->
-								<br>
-								<br>
+								<br><h1></h1>
 								<p>Silahkan klik tombol untuk melakukan wakaf</p>
 							</div>
 							<!--/ End Single Sidebar -->

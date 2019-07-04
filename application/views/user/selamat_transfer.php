@@ -83,10 +83,11 @@ $this->load->view('user/header');
 				<p>telah melakukan donasi untuk program ini. <br> Donasi Anda sebesar :<br>  <h1>Rp. <?php echo $row->nominal;?></h1></p>
 				<p>Silahkan untuk mentransfer ke Bank dibawah ini :</p> <p> <h1></h1></p>
 				<h3><?php echo $row->bank;?></h3>
-				<p>Silahkan untuk mengirim bukti transfer</p><br>
+				<p>Klik tombol "Selanjutnya" untuk mengirim bukti transfer</p><br>
 			</div>
 				<div class="form-group text-center">
-				<a href="<?php echo base_url() ?>member/c_upload_foto/e/<?php echo $row->id ?>" class="btn btn-sm btn-success text-center">Kirim Foto</a>	
+				<a href="<?php echo base_url() ?>member/c_upload_foto/e/<?php echo $row->id ?>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Selanjutnya</a>
+				<!-- <a href="<?php echo base_url() ?>member/c_upload_foto/e/<?php echo $row->id ?>" class="btn btn-sm btn-success text-center">Kirim Foto</a> -->	
 					<!-- <button type="submit" class="button primary"><i class="fa fa-send"></i>Submit</button> -->
 					<!-- <button type="submit" class="btn btn-success">Kirim</button> <br><br><br> -->
 		        </div>

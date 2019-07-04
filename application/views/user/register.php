@@ -84,14 +84,14 @@ $this->load->view('user/header');
             </div>
 			<div class="form-group">
 				<label for="exampleInputEmail1">Password</label>
-				<input type="text" name="password" class="form-control" placeholder="Password" required="required">
+				<input type="password" name="password" class="form-control" placeholder="Password" required="required">
             </div>
             <div class="form-group">
             	<label for="exampleInputEmail1">Setatus</label>
 				<input type="text" name="level" value="member" readonly>
             </div>
-			<div class="form-group center">	
-				<button type="submit" class="button primary"><i class="fa fa-send"></i>Submit</button>
+			<div class="form-group text-center">	
+				<button type="submit" class="button primary"><i class="fa fa-send"></i>Simpan</button>
             </div>
 		</form>
 		<?php echo form_close() ?>

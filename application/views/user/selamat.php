@@ -64,7 +64,7 @@ $this->load->view('user/header');
 				<div class="row">
 					<div class="col-md-12 col-sm-12 col-xs-12 wow fadeIn">
 						<div class="section-title center">
-							<h2> <span>Upload Foto</span></h2><br>
+							<h2> <span>Selesai</span></h2><br>
 						</div>
 					</div>
 				</div><br>
@@ -74,10 +74,11 @@ $this->load->view('user/header');
 		<div class="container">
 			<div class="text-center">
 							<!-- <h2> <span>Upload Foto Berhasil</span></h2><br> -->
-					<h2> <span>Selamat !</span></h2><br>
+					<h2> <span>Selamat !</span></h2>
 					<h2> <span> Foto Berhasil Di Upload!</span></h2><br>
 					<div class="form-group text-center">	
 								<a href="c_home" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Kembali Ke Home</a>
+								<a href="c_wakaf" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">   Wakaf Lagi?   </a>
                             </div>
 			</div>
 		</div>

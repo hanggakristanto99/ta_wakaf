@@ -68,9 +68,9 @@ $this->load->view('user/header');
 						</div>
 					</div>
 				</div><br>
-	<div class="row row-no-gutters">
-  <div class="col-xs-6 col-md-4"> </div>
-  <div class="col-xs-6 col-md-4">
+			<div class="row row-no-gutters">
+		  <div class="col-xs-6 col-md-4"> </div>
+		  <div class="col-xs-6 col-md-4">
 		<div class="container">
 	
 		                  							<?php 
@@ -95,21 +95,14 @@ $this->load->view('user/header');
 			                        </div>
 
         							  <div class="form-group col-md-4">
-        							    <!-- <label for="text">Gambar</label> -->
-        							    <!-- <?php 
-											if($row->gambar==''){?>
-												<label>Belum Ada Gambar</label><br>
-											<?php }else{ ?>
-												<img src="<?php echo base_url('uploads/thumbnail/'.$row->gambar)?>"><br>
-											<?php }?> -->
-											Klik Tombol "Choose File" Untuk Memilih Gambar <br> <input type="file" name="gambar" class="form-control">
-        							  </div><br>
+											Klik Tombol "Choose File" Untuk Memilih Gambar <h1></h1><input type="file" name="gambar" class="form-control" required>
+        							  </div><br><h1></h1>
         							  <input type="hidden" name="id" value="<?php echo $row->id;?>">
-        						<button type="submit" class="btn btn-success">Kirim</button> <br><br><br>
+        							  <button type="submit" class="btn btn-primary">Kirim</button>
         						</form><br>
         					<?php echo form_close(); }?> <br>
 		</div>
-  </div>
+   </div>
   <div class="col-xs-6 col-md-4"> </div>
 </div>			
 </div>			

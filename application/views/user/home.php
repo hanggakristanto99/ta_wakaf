@@ -25,19 +25,19 @@ $this->load->view('user/header');
 										<li><a href="<?php echo site_url('member/c_wakaf'); ?>">Wakaf</a></li>
 										<li><a href="<?php echo site_url('member/c_contac'); ?>">Contact</a></li>
 
-										<li><a href="<?php echo site_url('admin/c_admin/logout'); ?>"><?php
+										<?php
 											if ($this->session->userdata('logged_in')=='Sudah Loggin') {
-														
-												echo "Logout";
-											}
-											elseif ($this->session->unset_userdata('level')=='Belum Login') {
-												
-												echo "Login";
-											}		
-											 ?></a>
 
-										</li>				
-										<!-- <li><a href="#why-choose"> Hi,, <?= $username; ?></a></li> -->
+														?>
+														<li><a href="<?php echo site_url('member/c_home/logout'); ?>">Logout</a></li><?php
+											}
+											else {
+												
+												?>
+														<li><a href="<?php echo site_url('member/c_halaman_login'); ?>">Login</a></li><?php
+
+											}		
+											 ?>
 									</ul>
 								</div>
 							</nav>

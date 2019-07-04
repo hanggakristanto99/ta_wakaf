@@ -30,7 +30,7 @@ $this->load->view('user/header');
 														
 												echo "Logout";
 											}
-											elseif ($this->session->unset_userdata('level')=='Belum Login') {
+											else  {
 												
 												echo "Login";
 											}		

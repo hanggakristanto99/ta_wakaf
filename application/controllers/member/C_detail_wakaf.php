@@ -14,6 +14,7 @@ class C_detail_wakaf extends CI_Controller {
 
 		$data['username'] = $this->session->userdata('username');
 		$data['wakaf']=$this->M_detail_wakaf->tampil_data();
+		$this->load->view('user/header');
 		$this->load->view('user/detail_wakaf', $data);
 	}
 
