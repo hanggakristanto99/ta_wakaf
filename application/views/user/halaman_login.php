@@ -7,7 +7,7 @@ $this->load->view('user/header');
 					<div class="col-md-2 col-sm-12 col-xs-12">
 						<!-- Logo -->
 						<div class="logo">
-							<a href="#">KitaWakaf</a>
+							<a href="<?php echo site_url('c_user'); ?>">KitaWakaf</a>
 						</div>
 						<!--/ End Logo -->
 					</div>
@@ -18,7 +18,7 @@ $this->load->view('user/header');
 								<div class="mobile-nav"></div>
 								<div class="collapse navbar-collapse">
 									<ul class="nav navbar-nav menu">
-										<li><a href="<?php echo site_url('member/c_home'); ?>">Home</a>
+										<li><a href="<?php echo site_url('c_user'); ?>">Home</a>
 										</li>
 										<li><a href="<?php echo site_url('member/c_profil'); ?>">Profil</a></li>
 										<li><a href="<?php echo site_url('member/c_berita'); ?>">Berita</a></li>
@@ -99,11 +99,13 @@ $this->load->view('user/header');
                             </div>
 						</form>
 						<?php echo form_close(); ?><br>
-							<p>
-<a href="<?php echo site_url('member/c_register'); ?>" class="customLink">
-   Belum punya akun, Buat Akun Sekarang?
-</a>
-</p>
+							
+					<div class="text-center">
+						<a href="<?php echo site_url('member/c_register'); ?>" class="center">
+						   Belum punya akun, Buat Akun Sekarang?
+						</a>
+					</div>
+
   </div>
   <div class="col-xs-6 col-md-4"> </div>
 </div>			

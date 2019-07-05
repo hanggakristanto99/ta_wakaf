@@ -1,62 +1,7 @@
 <?php 
 $this->load->view('user/header');
  ?>
-		<header id="header">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-2 col-sm-12 col-xs-12">
-						<!-- Logo -->
-						<div class="logo">
-							<a href="#">KitaWakaf</a>
-						</div>
-						<!--/ End Logo -->
-					</div>
-					<div class="col-md-8 col-sm-12 col-xs-12">
-						<div class="nav-area">
-							<!-- Main Menu -->
-							<nav class="mainmenu">
-								<div class="mobile-nav"></div>
-								<div class="collapse navbar-collapse">
-									<ul class="nav navbar-nav menu">
-										<li class="active"><a href="<?php echo site_url('member/c_home'); ?>">Home</a>
-										</li>
-										<li><a href="<?php echo site_url('member/c_profil'); ?>">Profil</a></li>
-										<li><a href="<?php echo site_url('member/c_berita'); ?>">Berita</a></li>
-										<li><a href="<?php echo site_url('member/c_wakaf'); ?>">Wakaf</a></li>
-										<li><a href="<?php echo site_url('member/c_contac'); ?>">Contact</a></li>
 
-										<?php
-											if ($this->session->userdata('logged_in')=='Sudah Loggin') {
-
-														?>
-														<li><a href="<?php echo site_url('member/c_home/logout'); ?>">Logout</a></li><?php
-											}
-											else {
-												
-												?>
-														<li><a href="<?php echo site_url('member/c_halaman_login'); ?>">Login</a></li><?php
-
-											}		
-											 ?>
-									</ul>
-								</div>
-							</nav>
-							<!--/ End Main Menu -->
-						</div>
-					</div>
-					<div class="col-md-2">
-						<!-- Social -->
-						<ul class="social">
-							<!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
-							<li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="mailto:kitawakaf@gmail.com"><i class="fa fa-envelope "></i></a></li>
-							<li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
-						</ul>
-						<!--/ End Social -->
-					</div>
-				</div>
-			</div>
-		</header>
 		<!--/ End Header -->
 		
 		<!-- Start Slider -->
@@ -74,7 +19,7 @@ $this->load->view('user/header');
 										<p>Wakaf Tunai Untuk Pembelian Lahan Pertanian Terpadu (Sawah, Kebun, Ternak Hewan Kurban, Dan Lain-lain)</p>
 										<p>Wakaf Aset Berupa Wakaf Tanah Dan Bangunan (Properti), Wakaf Bisnis Dan Usaha, Wakaf Saham Dan Surat Berharga.</p>
 										<div class="slide-button">
-											<a href="#contact" class="button primary">Wakaf Sekarang</a>
+											<a href="<?php echo site_url('member/c_wakaf'); ?>" class="button primary">Wakaf Sekarang</a>
 										</div>
 									</div>
 								</div>
@@ -96,7 +41,7 @@ $this->load->view('user/header');
 										<p>Wakaf Tunai Untuk Pembelian Lahan Pertanian Terpadu (Sawah, Kebun, Ternak Hewan Kurban, Dan Lain-lain)</p>
 										<p>Wakaf Aset Berupa Wakaf Tanah Dan Bangunan (Properti), Wakaf Bisnis Dan Usaha, Wakaf Saham Dan Surat Berharga.</p>
 										<div class="slide-button">
-											<a href="#contact" class="button primary">Wakaf Sekarang</a>
+											<a href="<?php echo site_url('member/c_wakaf'); ?>" class="button primary">Wakaf Sekarang</a>
 										</div>
 									</div>
 								</div>
@@ -118,7 +63,7 @@ $this->load->view('user/header');
 										<p>Wakaf Tunai Untuk Pembelian Lahan Pertanian Terpadu (Sawah, Kebun, Ternak Hewan Kurban, Dan Lain-lain)</p>
 										<p>Wakaf Aset Berupa Wakaf Tanah Dan Bangunan (Properti), Wakaf Bisnis Dan Usaha, Wakaf Saham Dan Surat Berharga.</p>
 										<div class="slide-button">
-											<a href="#contact" class="button primary">Wakaf Sekarang</a>
+											<a href="<?php echo site_url('member/c_wakaf'); ?>" class="button primary">Wakaf Sekarang</a>
 										</div>
 									</div>
 								</div>
@@ -147,7 +92,7 @@ $this->load->view('user/header');
 					<!-- Single Service -->
 					<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="0.4s">
 						<div class="single-service">
-							<i class="fa fa-check"></i>
+							<i class="fa fa-handshake-o"></i>
 							<h2>Cara Berdonasi Mudah</h2>
 							<p>Berdonasi hanya dengan beberapa langkah mudah kapanpun dimanapun.</p>
 						</div>
@@ -156,7 +101,7 @@ $this->load->view('user/header');
 					<!-- Single Service -->
 					<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="0.6s">
 						<div class="single-service">
-							<i class="fa fa-sitemap"></i>
+							<i class="fa fa-wpforms"></i>
 							<h2>Variatif Program</h2>
 							<p>Program sosial untuk membantu & memberdayakan saudara kita.</p>
 						</div>
@@ -165,7 +110,7 @@ $this->load->view('user/header');
 					<!-- Single Service -->
 					<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="0.8s">
 						<div class="single-service">
-							<i class="fa fa-send"></i>
+							<i class="fa fa-share"></i>
 							<h2>Donasi Tepat Saluran</h2>
 							<p>Donasi yang anda titipkan disalurkan tepat kepada penerima manfaat.</p>
 						</div>
@@ -174,7 +119,7 @@ $this->load->view('user/header');
 					<!-- Single Service -->
 					<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="1s">
 						<div class="single-service">
-							<i class="fa fa-edit"></i>
+							<i class="fa fa-users"></i>
 							<h2>Pengelolaan Profesional</h2>
 							<p>Profesional baik dalam mengelola hingga menyalurkan donasi anda.</p>
 						</div>
@@ -196,7 +141,7 @@ $this->load->view('user/header');
 							<div class="statics">	
 								<div class="col-md-12 col-sm-12 col-xs-12">
 									<h2>VARIATIF PROGRAM!</h2>
-									<p>Berbagai program Sosial Untuk Membantu & Memberdayakan Saudara Kita.</p>
+									<p>Berbagai program wakaf Untuk Membantu & Memberdayakan Saudara Kita.</p>
 								</div>
 								<div class="col-md-6 col-sm-6 col-xs-12 wow fadeIn" data-wow-delay="0.4s">
 									<!-- Static Single -->
@@ -250,7 +195,7 @@ $this->load->view('user/header');
 								<h2> <span>Manfaat</span></h2>
 							</div>
 							<div class="some-info">
-								<p>Di era disruption ini, KITAWAKAF buat galang dana jadi lebih transparan dan viral. Ini baru inovasi sosial yang dibutuhkan oleh Indonesia.</p>
+								<p>Di era zaman modern ini, KITAWAKAF merupakan website untuk berwakaf secara online dan transparan</p>
 							</div>
 							<ul class="info-list">
 								<li><i class="fa fa-check"></i>Harta benda yang diwakafkan tetap utuh terpelihara, terjamin kelangsungannya dan tidak bisa hilang atau berpindah tangan.</li>
@@ -335,9 +280,9 @@ $this->load->view('user/header');
 								<div class="testimonial-info">
 									<div class="img">
 										<span class="arrow"></span>
-										<img src="<?= base_url();?>awal/images/testimonial1.jpg" class="img-circle" alt="">
+										<img src="<?= base_url();?>awal/images/testimonial1.png" class="img-circle" alt="">
 									</div>
-									<h6>Shakil<span>Founder Codeglim</span></h6>
+									<h6>Ustadz Aa Gym<span></span></h6>
 								</div>			
 							</div>
 							<!--/ End Single Testimonial -->
@@ -349,9 +294,9 @@ $this->load->view('user/header');
 								<div class="testimonial-info">
 									<div class="img">
 										<span class="arrow"></span>
-										<img src="<?= base_url();?>awal/images/testimonial2.jpg" class="img-circle" alt="">
+										<img src="<?= base_url();?>awal/images/testimonial2.png" class="img-circle" alt="">
 									</div>
-									<h6>Rimu<span>CEO Codeglim</span></h6>
+									<h6>Ustadz Wahyu<span></span></h6>
 								</div>			
 							</div>
 							<!--/ End Single Testimonial -->
@@ -363,9 +308,9 @@ $this->load->view('user/header');
 								<div class="testimonial-info">
 									<div class="img">
 										<span class="arrow"></span>
-										<img src="<?= base_url();?>awal/images/testimonial3.jpg" class="img-circle" alt="">
+										<img src="<?= base_url();?>awal/images/testimonial3.png" class="img-circle" alt="">
 									</div>
-									<h6>Jehad<span>Founder DesignGuru</span></h6>
+									<h6>Ustadz Arifin Ilham<span></span></h6>
 								</div>			
 							</div>
 							<!--/ End Single Testimonial -->
@@ -384,7 +329,7 @@ $this->load->view('user/header');
 					<div class="col-md-12 col-sm-12 col-xs-12 wow fadeIn">
 						<div class="section-title center"><br><br>
 							<h2> <span>Berita</span></h2>
-							<p>Berita terbaru hari ini</p>
+							<p>Berita terbaru</p>
 						</div>
 					</div>
 				</div>
@@ -396,7 +341,7 @@ $this->load->view('user/header');
 			            foreach($berita as $row){ 
 			          ?>
 							<!-- Single Portfolio -->
-							<div class="portfolio-single">
+							<div class="portfolio">
 								<a href="<?php echo base_url() ?>member/c_berita/e/<?php echo $row->id ?>">
 									<div class="portfolio-head">
 										<?php if($row->gambar==''){}else{?>
@@ -428,7 +373,7 @@ $this->load->view('user/header');
 					<div class="col-md-12 col-sm-12 col-xs-12 wow fadeIn">
 						<div class="section-title center">
 							<h2> <span>Wakaf</span></h2>
-							<p>Berita terbaru hari ini</p>
+							<p>Pilih dan salurkan wakaf anda untuk program yang berarti bagi anda dan mereka.</p>
 						</div>
 					</div>
 				</div>

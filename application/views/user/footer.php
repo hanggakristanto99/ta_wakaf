@@ -29,7 +29,7 @@
 					<div class="row">
 						<div class="col-md-12 col-sm-12 col-xs-12">
 							<div class="text">
-								<p>&copy; Copyright 2019<span><i class="fa fa-heart"></i></span>Hangga Kristanto.</p>
+								<a href="https://www.facebook.com/hangga.kristanto.9"><p>&copy; Copyright 2019<span><i class="fa fa-heart"></i></span>Hangga Kristanto.</p></a>
 							</div>
 						</div>
 					</div>

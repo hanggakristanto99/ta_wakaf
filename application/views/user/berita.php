@@ -7,7 +7,7 @@ $this->load->view('user/header');
 					<div class="col-md-2 col-sm-12 col-xs-12">
 						<!-- Logo -->
 						<div class="logo">
-							<a href="#">KitaWakaf</a>
+							<a href="<?php echo site_url('c_user'); ?>">KitaWakaf</a>
 						</div>
 						<!--/ End Logo -->
 					</div>
@@ -18,7 +18,7 @@ $this->load->view('user/header');
 								<div class="mobile-nav"></div>
 								<div class="collapse navbar-collapse">
 									<ul class="nav navbar-nav menu">
-										<li><a href="<?php echo site_url('member/c_home'); ?>">Home</a>
+										<li><a href="<?php echo site_url('c_user'); ?>">Home</a>
 										</li>
 										<li><a href="<?php echo site_url('member/c_profil'); ?>">Profil</a></li>
 										<li class="active"><a href="<?php echo site_url('member/c_berita'); ?>">Berita</a></li>
@@ -65,40 +65,10 @@ $this->load->view('user/header');
 					<div class="col-md-12 col-sm-12 col-xs-12  wow fadeIn">
 						<div class="section-title center">
 							<h2> <span>Berita</span></h2>
-							<p>Berita terbaru hari ini</p>
+							<p>Berita yang terbaru</p>
 						</div>
 					</div>
 				</div>
-<!-- 				 <table id="example2" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-              <th>Judul</th>
-              <th>Artikel</th>
-              <th>Tanggal</th>
-              <th>Foto</th>
-                </tr>
-                </thead>
-                <tbody>
-                <?php
-            $no = 1; 
-            foreach($berita as $row){ 
-          ?>
-                <tr>
-          <td><?php echo $row->judul;?></td>
-          <td><?php echo $row->artikel;?></td>
-          <td><?php echo $row->tgl;?></td>
-          <td>
-          <?php if($row->gambar==''){}else{?>
-
-            <img style="width:50px;height:30px;" src="<?php echo base_url('uploads/thumbnail/'.$row->gambar)?>">
-          <?php }?>
-          </td>
-            </tr>
-          <?php } ?>
-                </tbody>
-                <tfoot>
-                </tfoot>
-              </table> -->
 
 				<div class="container-fluid">
 					<div class="row">
