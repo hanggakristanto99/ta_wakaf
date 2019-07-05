@@ -34,7 +34,7 @@
                   <?php echo $this->session->flashdata('notif') ?>
       <div class="float-right">
       <a href="<?php echo base_url() ?>admin/c_pewakaf/i" class="btn btn-md btn-success">Tambah Data Pewakaf</a> &nbsp
-      <a href="<?php echo base_url() ?>admin/c_pewakaf/i" class="btn btn-md btn-success">Cetak PDF</a>
+      <a href="<?php echo base_url() ?>Data_wakaf_pdf" target="_blank" class="btn btn-md btn-primary">Cetak PDF</a>
       </div>
        <div class="float-left">
       </div>

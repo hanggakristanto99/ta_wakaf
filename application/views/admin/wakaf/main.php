@@ -80,7 +80,7 @@
         </button>
       </div>
       <div class="modal-body">
-       <img  src="<?php echo base_url('uploads/thumbnail/'.$row->gambar)?>" alt="Snow" style="width:100%;max-width:100%">
+       <img  src="<?php echo base_url('uploads/thumbnail/'.$row->gambar)?>"  style="width:100%;max-width:100%">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
