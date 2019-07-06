@@ -1,19 +1,21 @@
 <?php 
-class C_berita extends CI_Controller
-{
+class C_berita extends CI_Controller{
 	
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->model('admin/m_berita');
+		if ($this->session->userdata('level') =="") {
+			redirect('auth');
+		}
+		if ($this->session->userdata('level') =="member") {
+			redirect('auth');
+		}
 	}
 
 
 	function index(){
-		if ($this->session->userdata('level') =="") {
-			
-			redirect('auth');
-		}
+
 		$data['username'] = $this->session->userdata('username');
 		$data['berita']=$this->m_berita->tampil_data();
 		$this->load->view('admin/berita/main',$data);

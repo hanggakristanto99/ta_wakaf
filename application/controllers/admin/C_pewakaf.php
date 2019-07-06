@@ -6,6 +6,13 @@ class C_pewakaf extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('admin/m_pewakaf');
+		//cek login
+		if ($this->session->userdata('level')=="") {
+			redirect('auth');
+		}
+		if ($this->session->userdata('level') =="member") {
+			redirect('auth');
+		}
 		$this->load->helper('text');
 	}
 

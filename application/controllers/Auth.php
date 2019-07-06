@@ -12,7 +12,13 @@ class Auth extends CI_Controller {
 			);
 		$this->load->model('model_user'); // load model_user
 		$hasil = $this->model_user->cek_user($data);
-		if ($hasil[0]->uid > 0) {
+		// var_dump($hasil);
+		$count=count($hasil);
+		// echo $count;
+
+		if ($count > 0 ) {
+
+			// die('masuk');
 			foreach ($hasil as $sess) {
 				$sess_data['logged_in'] = 'Sudah Loggin';
 				$sess_data['uid'] = $sess->uid;
@@ -27,10 +33,12 @@ class Auth extends CI_Controller {
 			}
 			elseif ($this->session->userdata('level')=='member') {
 				
-				redirect('member/c_home');
+				redirect('c_home');
 			}		
 		}
 		else {
+			// die('tidak masuk');
+
 			echo "<script>alert('Gagal login: Cek username, password!');history.go(-1);</script>";
 		}
 	}

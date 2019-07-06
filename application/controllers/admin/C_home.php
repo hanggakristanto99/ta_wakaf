@@ -8,7 +8,11 @@ class C_home extends CI_Controller
 		public function __construct() {
 		parent::__construct();
 		$this->load->model('model_user');
-		if ($this->session->userdata('username')=="") {
+		//cek login
+		if ($this->session->userdata('level')=="") {
+			redirect('auth');
+		}
+		if ($this->session->userdata('level') =="member") {
 			redirect('auth');
 		}
 		$this->load->helper('text');

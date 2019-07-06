@@ -7,7 +7,7 @@ $this->load->view('user/header');
 					<div class="col-md-2 col-sm-12 col-xs-12">
 						<!-- Logo -->
 						<div class="logo">
-							<a href="<?php echo site_url('c_user'); ?>">KitaWakaf</a>
+							<a href="<?php echo site_url('c_home'); ?>">KitaWakaf</a>
 						</div>
 						<!--/ End Logo -->
 					</div>
@@ -18,26 +18,24 @@ $this->load->view('user/header');
 								<div class="mobile-nav"></div>
 								<div class="collapse navbar-collapse">
 									<ul class="nav navbar-nav menu">
-										<li><a href="<?php echo site_url('member/c_home'); ?>">Home</a>
+										<li><a href="<?php echo site_url('c_home'); ?>">Home</a>
 										</li>
 										<li><a href="<?php echo site_url('member/c_profil'); ?>">Profil</a></li>
 										<li><a href="<?php echo site_url('member/c_berita'); ?>">Berita</a></li>
 										<li class="active"><a href="<?php echo site_url('member/c_wakaf'); ?>">Wakaf</a></li>
 										<li><a href="<?php echo site_url('member/c_contac'); ?>">Contact</a></li>
 
-										<li><a href="<?php echo site_url('admin/c_admin/logout'); ?>"><?php
+										
+										<?php
 											if ($this->session->userdata('logged_in')=='Sudah Loggin') {
-														
-												echo "Logout";
+										?>
+										<li><a href="<?php echo site_url('member/c_home/logout'); ?>">Logout</a></li><?php
 											}
-											elseif ($this->session->unset_userdata('level')=='Belum Login') {
-												
-												echo "Login";
+											else {
+											?>
+										<li><a href="<?php echo site_url('member/c_halaman_login'); ?>">Login</a></li><?php
 											}		
-											 ?></a>
-
-										</li>				
-										<!-- <li><a href="#why-choose"> Hi,, <?= $username; ?></a></li> -->
+											 ?>
 									</ul>
 								</div>
 							</nav>

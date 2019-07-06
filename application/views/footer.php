@@ -1,9 +1,9 @@
-  <!-- /.content-wrapper -->
+
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 1.0
     </div>
-    <strong>Copyright &copy; 2019 <a href="https://adminlte.io">Hangga Kristanto</a>. </strong> All rights
+    <strong>Copyright &copy; 2019 <a href="https://www.facebook.com/hangga.kristanto.9">Hangga Kristanto</a>. </strong> All rights
     reserved.
   </footer>
 
@@ -13,8 +13,6 @@
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
 </div>
-<!-- ./wrapper -->
-
 <!-- jQuery 3 -->
 <script src="<?= base_url();?>assets/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
@@ -44,6 +42,5 @@
     })
   })
 </script>
-
 </body>
 </html>

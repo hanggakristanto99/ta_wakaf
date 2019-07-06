@@ -13,7 +13,7 @@
         <title>KITAWAKAF | Hangga</title>
 		
 		<!-- Favicon -->
-		<link rel="icon" type="image/png" href="<?= base_url();?>awal/images/favicon.png">	
+		<!-- <link rel="icon" type="image/png" href="<?= base_url();?>awal/images/favicon.png">	 -->
 		
         <!-- Google Font -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,700,900" rel="stylesheet"> 
@@ -45,7 +45,7 @@
         <link rel="stylesheet" href="<?= base_url();?>awal/css/default.css">	
         <link rel="stylesheet" href="<?= base_url();?>awal/css/responsive.css">	
 		<link rel="stylesheet" href="<?= base_url();?>awal/css/skin/green.css">
-		
+
 
 	<!-- 	<link rel="stylesheet" href="#" id="colors"> -->
     </head>
@@ -74,7 +74,7 @@
 			<h4>Hubungi Admin</h4>
 			<h4>Melalui Whatsapp?</h4>
 			<ul>
-				<li><a href="https://wa.me/628561333111?text=Assalamualaikum,%20saya%20ingin%20bertanya%20..." target="_blank" ><img style="width: 100px; height: 100px;display: block;
+				<li><a href="https://wa.me/628561333111?text=Assalamualaikum,%20saya%20ingin%20berwakaf%20..." target="_blank" ><img style="width: 100px; height: 100px;display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;" src="http://www.jagatreview.com/wp-content/uploads/2013/04/whatsapp-logo.png?w=640" alt="..." class="rounded-circle"></a></li>
@@ -83,59 +83,16 @@
 		</div>
 		<!--/ ENd Mp Color -->
 		<!-- Start Header -->
-		<header id="header">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-2 col-sm-12 col-xs-12">
-						<!-- Logo -->
-						<div class="logo">
-							<a href="<?php echo site_url('c_user'); ?>">KitaWakaf</a>
-						</div>
-						<!--/ End Logo -->
-					</div>
-					<div class="col-md-8 col-sm-12 col-xs-12">
-						<div class="nav-area">
-							<!-- Main Menu -->
-							<nav class="mainmenu">
-								<div class="mobile-nav"></div>
-								<div class="collapse navbar-collapse">
-									<ul class="nav navbar-nav menu">
-										<li class="active"><a href="<?php echo site_url('c_user'); ?>">Home</a>
-										</li>
-										<li><a href="<?php echo site_url('member/c_profil'); ?>">Profil</a></li>
-										<li><a href="<?php echo site_url('member/c_berita'); ?>">Berita</a></li>
-										<li><a href="<?php echo site_url('member/c_wakaf'); ?>">Wakaf</a></li>
-										<li><a href="<?php echo site_url('member/c_contac'); ?>">Contact</a></li>
 
-										<?php
-											if ($this->session->userdata('logged_in')=='Sudah Loggin') {
-
-														?>
-														<li><a href="<?php echo site_url('member/c_home/logout'); ?>">Logout</a></li><?php
-											}
-											else {
-												
-												?>
-														<li><a href="<?php echo site_url('member/c_halaman_login'); ?>">Login</a></li><?php
-
-											}		
-											 ?>
-									</ul>
-								</div>
-							</nav>
-							<!--/ End Main Menu -->
-						</div>
-					</div>
-					<div class="col-md-2">
-						<!-- Social -->
-						<ul class="social">
-							<!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
-							<li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="mailto:kitawakaf@gmail.com"><i class="fa fa-envelope "></i></a></li>
-							<li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
-						</ul>
-						<!--/ End Social -->
-					</div>
-				</div>
-			</div>
-		</header>
+			<script>
+				$(document).ready(function() {
+				    // $(document).on("click","#menu",function() {
+				    //     // alert("click bound to document listening for #test-element");
+				    //     $('#menu').removeClass('current');
+				    //     $('#menu').addClass('active');
+				    // });
+			     $('ul li a').click(function(){
+				    $('li a').removeClass("active");
+				    $(this).addClass("active");
+			    });
+			</script>

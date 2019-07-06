@@ -8,7 +8,14 @@ class Buku extends CI_Controller {
 		parent ::__construct();
 
 		//load model
-		$this->load->model('model_buku'); 
+		$this->load->model('model_buku');
+		//cek login
+		if ($this->session->userdata('level')=="") {
+			redirect('auth');
+		}
+		if ($this->session->userdata('level') =="member") {
+			redirect('auth');
+		} 
 		$this->load->helper('text');
 
 	}

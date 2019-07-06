@@ -6,6 +6,13 @@ class C_wakaf extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('admin/m_wakaf');
+		//cek login
+		if ($this->session->userdata('level')=="") {
+			redirect('auth');
+		}
+		if ($this->session->userdata('level') =="member") {
+			redirect('auth');
+		}
 		$this->load->helper('text');
 	}
 

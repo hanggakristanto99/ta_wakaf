@@ -4,11 +4,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class C_data_donatur extends CI_Controller {
 
 	public function __construct(){
-		
 		parent ::__construct();
-
 		//load model
 		$this->load->model('admin/m_data_donatur'); 
+		//cek login
+		if ($this->session->userdata('level')=="") {
+			redirect('auth');
+		}
+		if ($this->session->userdata('level') =="member") {
+			redirect('auth');
+		}
 		$this->load->helper('text');
 
 	}

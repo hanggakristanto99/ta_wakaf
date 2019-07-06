@@ -38,11 +38,11 @@
         						<form>
         						  <div class="form-group">
         							    <label for="text">Username</label>
-        							    <input type="text" name="username" class="form-control" placeholder="Nama">
+        							    <input type="email" name="username" class="form-control" placeholder="Username / Email">
         							  </div>
                         <div class="form-group">
-                          <label for="text">Email</label>
-                          <input type="email" name="email" class="form-control" placeholder="Email">
+                          <label for="text">Nama</label>
+                          <input type="text" name="email" class="form-control" placeholder="Nama">
                         </div>
 
         							  <div class="form-group">

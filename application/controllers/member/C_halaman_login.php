@@ -24,11 +24,13 @@ class c_halaman_login extends CI_Controller {
 
 		$this->load->model('m_halaman_login'); // load model_user
 		$hasil = $this->m_halaman_login->cek_user($data);
-		// print_r($hasil);
+		// var_dump($hasil);
 		// exit();
-		if ($hasil[0]->uid > 0) {
+		
+		if ($hasil == 0) {
 			// var_dump("berhasil");
 			// exit();
+			// die('masuk');
 			foreach ($hasil as $sess) {
 				$sess_data['logged_in'] = 'Sudah Loggin';
 				$sess_data['uid'] = $sess->uid;
@@ -47,6 +49,8 @@ class c_halaman_login extends CI_Controller {
 			}		
 		}
 		else {
+			// die('sese');
+			// die;
 			echo "<script>alert('Gagal login: Cek username, password!');history.go(-1);</script>";
 		}
 	}
