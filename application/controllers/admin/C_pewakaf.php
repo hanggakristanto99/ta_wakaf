@@ -134,8 +134,8 @@ class C_pewakaf extends CI_Controller
 				'image_library'=>'gd2',
 				'new_image'=>'uploads/thumbnail',
 				'maintain_ratio'=>true,
-				'width'=>150,
-				'height'=>200
+				'width'=>1050,
+				'height'=>2000
 			);
 		
 		$this->load->library('image_lib',$config2);
@@ -158,6 +158,8 @@ class C_pewakaf extends CI_Controller
 	function hapus($kode){
 		$data_kode = array('id'=>$kode);
 		$this->m_pewakaf->hapus_data($data_kode);
+		$this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible"> Berhasil! data berhasil Hapus.
+			                                    </div>');
 		redirect('admin/c_pewakaf');
 	}
 }?>

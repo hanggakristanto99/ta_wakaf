@@ -62,6 +62,8 @@ class C_berita extends CI_Controller{
 		$this->load->library('image_lib',$config2);
 		$this->image_lib->resize();
 		$this->m_berita->tambah_data($data_berita);
+		$this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible"> Success! data berhasil disimpan didatabase.
+			                                    </div>');
 
 		redirect('admin/C_berita');
 	}
@@ -141,6 +143,8 @@ class C_berita extends CI_Controller{
 	function hapus($kode){
 		$data_kode = array('id'=>$kode);
 		$this->m_berita->hapus_data($data_kode);
+		$this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible"> Berhasil! data berhasil Hapus.
+			                                    </div>');
 		redirect('admin/c_berita');
 	}
 }?>

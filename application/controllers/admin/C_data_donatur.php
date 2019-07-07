@@ -99,7 +99,7 @@ class C_data_donatur extends CI_Controller {
 
 		$this->m_data_donatur->update($data, $id);
 
-		$this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible"> Success! data berhasil diupdate didatabase.
+		$this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible"> Berhasil! data berhasil diupdate.
 			                                    </div>');
 
 		//redirect
@@ -111,7 +111,7 @@ class C_data_donatur extends CI_Controller {
 		function hapus($uid){
 		$data_kode = array('uid'=>$uid);
 		$this->m_data_donatur->hapus($data_kode);
-		$this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible"> Success! data berhasil diupdate didatabase.
+		$this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible"> Berhasil! data berhasil Hapus.
 			                                    </div>');
 
 		redirect('admin/c_data_donatur');

@@ -62,8 +62,8 @@ $this->load->view('user/header');
 				<div class="row">
 					<div class="col-md-12 col-sm-12 col-xs-12  wow fadeIn">
 						<div class="section-title center">
-							<h2> <span>Berita</span></h2>
-							<p>Berita yang terbaru</p>
+							<h2> <span>Wakaf</span></h2>
+							<p>Pilih dan salurkan wakaf anda untuk program yang berarti bagi anda dan mereka</p>
 						</div>
 					</div>
 				</div>
