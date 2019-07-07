@@ -25,19 +25,16 @@ $this->load->view('user/header');
 										<li class="active"><a href="<?php echo site_url('member/c_wakaf'); ?>">Wakaf</a></li>
 										<li><a href="<?php echo site_url('member/c_contac'); ?>">Contact</a></li>
 
-										<li><a href="<?php echo site_url('admin/c_admin/logout'); ?>"><?php
+										<?php
 											if ($this->session->userdata('logged_in')=='Sudah Loggin') {
-														
-												echo "Logout";
+										?>
+										<li><a href="<?php echo site_url('c_home/logout'); ?>">Logout</a></li><?php
 											}
-											else  {
-												
-												echo "Login";
+											else {
+											?>
+										<li><a href="<?php echo site_url('member/c_halaman_login'); ?>">Login</a></li><?php
 											}		
-											 ?></a>
-
-										</li>				
-										<!-- <li><a href="#why-choose"> Hi,, <?= $username; ?></a></li> -->
+											 ?>
 									</ul>
 								</div>
 							</nav>
@@ -98,9 +95,9 @@ $this->load->view('user/header');
 	      <label>Transfer ke Bank </label>
 	      <select name="bank" class="form-control" required>
 	        <option value="">Pilih Bank</option>
-	        <option value="BNI 7070705980 an.kitawakaf">BNI 7070705980 an.kitawakaf</option>
-	        <option value="">BCA</option>
-	        <option value="">BRI</option>
+	        <option>BNI 7070705980 an.kitawakaf</option>
+	        <option>BCA 3560705964 an.kitawakaf</option>
+	        <option>BRI 9830705937 an.kitawakaf</option>
 	      </select>
 	    </div>
 		<div class="form-group text-center">	

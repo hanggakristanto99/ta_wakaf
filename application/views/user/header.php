@@ -84,15 +84,10 @@
 		<!--/ ENd Mp Color -->
 		<!-- Start Header -->
 
-			<script>
+<!-- 			<script>
 				$(document).ready(function() {
-				    // $(document).on("click","#menu",function() {
-				    //     // alert("click bound to document listening for #test-element");
-				    //     $('#menu').removeClass('current');
-				    //     $('#menu').addClass('active');
-				    // });
 			     $('ul li a').click(function(){
 				    $('li a').removeClass("active");
 				    $(this).addClass("active");
 			    });
-			</script>
+			</script> -->

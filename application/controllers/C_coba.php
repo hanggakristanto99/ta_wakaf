@@ -24,7 +24,7 @@ class C_coba extends CI_Controller
 		$this->session->unset_userdata('username');
 		$this->session->unset_userdata('level');
 		session_destroy();
-		redirect('auth');
+		redirect('c_home');
 	}
 
 }

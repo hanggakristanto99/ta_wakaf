@@ -5,6 +5,7 @@ class C_upload_foto extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('user/M_upload_foto');
+		
 		$this->load->helper('text');
 	}
 	public function index() {
@@ -20,7 +21,7 @@ class C_upload_foto extends CI_Controller {
 		$this->session->unset_userdata('username');
 		$this->session->unset_userdata('level');
 		session_destroy();
-		redirect('auth');
+		redirect('c_home');
 	}
 function e($kode){
 		$data_kode = array('id'=>$kode);
@@ -74,8 +75,8 @@ function e($kode){
 				'image_library'=>'gd2',
 				'new_image'=>'uploads/thumbnail',
 				'maintain_ratio'=>true,
-				'width'=>150,
-				'height'=>200
+				'width'=>1050,
+				'height'=>2000
 			);
 		
 		$this->load->library('image_lib',$config2);

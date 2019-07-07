@@ -8,6 +8,7 @@ class c_halaman_login extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('user/m_halaman_login');
+		
 	}
 
 	public function index() {
@@ -24,10 +25,10 @@ class c_halaman_login extends CI_Controller {
 
 		$this->load->model('m_halaman_login'); // load model_user
 		$hasil = $this->m_halaman_login->cek_user($data);
-		// var_dump($hasil);
-		// exit();
-		
-		if ($hasil == 0) {
+		$count=count($hasil);
+		// echo $count;
+
+		if ($count > 0 ) {
 			// var_dump("berhasil");
 			// exit();
 			// die('masuk');
@@ -45,7 +46,7 @@ class c_halaman_login extends CI_Controller {
 			}
 			elseif ($this->session->userdata('level')=='member') {
 				
-				redirect('member/C_jenis_wakaf');
+				redirect('member/c_jenis_wakaf');
 			}		
 		}
 		else {

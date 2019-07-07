@@ -7,6 +7,7 @@ class C_register extends CI_Controller {
 		parent::__construct();
 		
 		$this->load->model('user/m_register'); 
+		
 		$this->load->helper('text');
 	}
 	public function index() {
@@ -43,7 +44,7 @@ class C_register extends CI_Controller {
 		$this->session->unset_userdata('username');
 		$this->session->unset_userdata('level');
 		session_destroy();
-		redirect('auth');
+		redirect('c_home');
 	}
 }
 ?>

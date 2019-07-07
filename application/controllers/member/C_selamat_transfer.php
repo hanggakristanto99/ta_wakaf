@@ -5,6 +5,7 @@ class C_selamat_transfer extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('user/m_selamat_transfer');
+		
 		$this->load->helper('text');
 	}
 	public function index() {
@@ -21,7 +22,7 @@ class C_selamat_transfer extends CI_Controller {
 		$this->session->unset_userdata('username');
 		$this->session->unset_userdata('level');
 		session_destroy();
-		redirect('auth');
+		redirect('c_home');
 	}
 }
 ?>

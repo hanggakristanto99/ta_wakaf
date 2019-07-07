@@ -29,7 +29,7 @@ $this->load->view('user/header');
 										<?php
 											if ($this->session->userdata('logged_in')=='Sudah Loggin') {
 										?>
-										<li><a href="<?php echo site_url('member/c_home/logout'); ?>">Logout</a></li><?php
+										<li><a href="<?php echo site_url('c_home/logout'); ?>">Logout</a></li><?php
 											}
 											else {
 											?>
@@ -62,11 +62,12 @@ $this->load->view('user/header');
 				<div class="row">
 					<div class="col-md-12 col-sm-12 col-xs-12  wow fadeIn">
 						<div class="section-title center">
-							<h2> <span>Wakaf</span></h2>
-							<p>Pilih dan salurkan wakaf anda untuk program yang berarti bagi anda dan mereka.</p>
+							<h2> <span>Berita</span></h2>
+							<p>Berita yang terbaru</p>
 						</div>
 					</div>
 				</div>
+
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-12 col-sm-12 col-xs-12">
@@ -79,11 +80,9 @@ $this->load->view('user/header');
 									<!-- Single blog -->
 									<div class="single-blog">
 										<div class="blog-head">
-											 <?php 
-											if($row->gambar==''){?>
-											<?php }else{ ?>
-												<img src="<?php echo base_url('uploads/thumbnail/'.$row->gambar)?>"><br>
-											<?php }?>
+											<?php if($row->gambar==''){}else{?>
+									            <img  src="<?php echo base_url('uploads/thumbnail/'.$row->gambar)?>">
+									          <?php }?>
 											<a href="<?php echo base_url() ?>member/c_wakaf/e/<?php echo $row->id ?>" class="link"><i class="fa fa-link"></i></a>
 										</div>
 										<div class="blog-content">
@@ -103,6 +102,8 @@ $this->load->view('user/header');
 						</div>
 					</div>
 				</div>
+
+
 			</div>
 		</section>
 		<!--/ End blog -->

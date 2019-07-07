@@ -25,19 +25,16 @@ $this->load->view('user/header');
 										<li class="active"><a href="<?php echo site_url('member/c_wakaf'); ?>">Wakaf</a></li>
 										<li><a href="<?php echo site_url('member/c_contac'); ?>">Contact</a></li>
 
-										<li><a href="<?php echo site_url('admin/c_admin/logout'); ?>"><?php
+										<?php
 											if ($this->session->userdata('logged_in')=='Sudah Loggin') {
-														
-												echo "Logout";
+										?>
+										<li><a href="<?php echo site_url('c_home/logout'); ?>">Logout</a></li><?php
 											}
-											elseif ($this->session->unset_userdata('level')=='Belum Login') {
-												
-												echo "Login";
+											else {
+											?>
+										<li><a href="<?php echo site_url('member/c_halaman_login'); ?>">Login</a></li><?php
 											}		
-											 ?></a>
-
-										</li>				
-										<!-- <li><a href="#why-choose"> Hi,, <?= $username; ?></a></li> -->
+											 ?>
 									</ul>
 								</div>
 							</nav>
@@ -77,7 +74,7 @@ $this->load->view('user/header');
 					<h2> <span>Selamat !</span></h2>
 					<h2> <span> Foto Berhasil Di Upload!</span></h2><br>
 					<div class="form-group text-center">	
-								<a href="c_home" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Kembali Ke Home</a>
+								<a href="../c_home" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Kembali Ke Home</a>
 								<a href="c_wakaf" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">   Wakaf Lagi?   </a>
                             </div>
 			</div>

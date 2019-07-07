@@ -25,19 +25,16 @@ $this->load->view('user/header');
 										<li class="active"><a href="<?php echo site_url('member/c_wakaf'); ?>">Wakaf</a></li>
 										<li><a href="<?php echo site_url('member/c_contac'); ?>">Contact</a></li>
 
-										<li><a href="<?php echo site_url('admin/c_admin/logout'); ?>"><?php
+										<?php
 											if ($this->session->userdata('logged_in')=='Sudah Loggin') {
-														
-												echo "Logout";
+										?>
+										<li><a href="<?php echo site_url('c_home/logout'); ?>">Logout</a></li><?php
 											}
-											elseif ($this->session->unset_userdata('level')=='Belum Login') {
-												
-												echo "Login";
+											else {
+											?>
+										<li><a href="<?php echo site_url('member/c_halaman_login'); ?>">Login</a></li><?php
 											}		
-											 ?></a>
-
-										</li>				
-										<!-- <li><a href="#why-choose"> Hi,, <?= $username; ?></a></li> -->
+											 ?>
 									</ul>
 								</div>
 							</nav>
@@ -84,7 +81,7 @@ $this->load->view('user/header');
 									<!-- <span><i class="fa fa-calender"></i>19 May</span>
 									<span><i class="fa fa-comments"></i>5 Comments</span> -->
 								</div>
-								<p><?php echo $row->artikel;?></p>
+								<p align="justify"><?php echo $row->artikel;?></p>
 							</div>
 						</div>
 						<!--/ End Single blog -->

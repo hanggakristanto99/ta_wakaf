@@ -5,6 +5,7 @@ class C_jenis_wakaf extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->model('user/m_pewakaf');
+		
 		$this->load->helper('text');
 	}
 	public function index() {
@@ -28,7 +29,7 @@ class C_jenis_wakaf extends CI_Controller {
 		$this->session->unset_userdata('username');
 		$this->session->unset_userdata('level');
 		session_destroy();
-		redirect('auth');
+		redirect('c_home');
 	}
 	function i(){
 		$this->load->view('user/jenis_wakaf');

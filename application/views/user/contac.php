@@ -28,7 +28,7 @@ $this->load->view('user/header');
 										<?php
 											if ($this->session->userdata('logged_in')=='Sudah Loggin') {
 										?>
-										<li><a href="<?php echo site_url('member/c_home/logout'); ?>">Logout</a></li><?php
+										<li><a href="<?php echo site_url('c_home/logout'); ?>">Logout</a></li><?php
 											}
 											else {
 											?>

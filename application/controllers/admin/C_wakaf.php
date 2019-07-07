@@ -63,8 +63,8 @@ class C_wakaf extends CI_Controller
 				'image_library'=>'gd2',
 				'new_image'=>'uploads/thumbnail',
 				'maintain_ratio'=>true,
-				'width'=>150,
-				'height'=>200
+				'width'=>1050,
+				'height'=>2000
 			);
 		$this->load->library('image_lib',$config2);
 		$this->image_lib->resize();

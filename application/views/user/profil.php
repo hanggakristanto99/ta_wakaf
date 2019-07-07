@@ -29,7 +29,7 @@ $this->load->view('user/header');
 											if ($this->session->userdata('logged_in')=='Sudah Loggin') {
 
 														?>
-														<li><a href="<?php echo site_url('member/c_home/logout'); ?>">Logout</a></li><?php
+														<li><a href="<?php echo site_url('c_home/logout'); ?>">Logout</a></li><?php
 											}
 											else {
 												
@@ -87,7 +87,7 @@ $this->load->view('user/header');
 							<!--/ End Tab Nav -->
 							<!-- Tab Content -->
 							<div class="tab-content">
-								<div role="tabpanel" class="tab-pane fade in active" id="welcome">
+								<div role="tabpanel" class="tab-pane fade in active">
 									<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KITAWAKAF adalah adalah institusi pengelola obyek wakaf dari masyarakat yang mengelola secara profesional, amanah, berjangkauan luas (global) demi membangun kesejahteraan masyarakat yang berhak menerimanya melalui program-program yang terutama bersifat memberdayakan (produktif).
 									</p>
 									<p align="justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KITAWAKAF sebagai organisasi filantropi Islam, bertekad menjadikan umat Islam dunia sebagai subjek pembangunan peradaban global yang lebih baik. Tekad KITAWAKAF, menjadi titik api pembangunan masyarakat sipil yang kuat, mendorong wakaf sebagai gerakan masyarakat Islam dunia.	</p><h1></h1>
