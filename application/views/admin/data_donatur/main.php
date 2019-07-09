@@ -63,7 +63,7 @@
                 <td><?php echo $row->password;?></td>
                 <td><?php echo $row->level;?></td>
               <td>
-            <a href="<?php echo base_url() ?>admin/c_data_donatur/update/<?php echo $row->uid ?>" class="btn btn-sm btn-success text-center">Edit</a>
+            <a href="<?php echo base_url() ?>admin/c_data_donatur/edit/<?php echo $row->uid ?>" class="btn btn-sm btn-success text-center">Edit</a>
               </td>
               <td>
                 <a href="<?php echo base_url() ?>admin/c_data_donatur/hapus/<?php echo $row->uid ?>" class="confirmClick text-center btn btn-sm btn-danger">Hapus</a>

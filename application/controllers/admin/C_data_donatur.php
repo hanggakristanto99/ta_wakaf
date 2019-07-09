@@ -5,8 +5,6 @@ class C_data_donatur extends CI_Controller {
 
 	public function __construct(){
 		parent ::__construct();
-		//load model
-		$this->load->model('admin/m_data_donatur'); 
 		//cek login
 		if ($this->session->userdata('level')=="") {
 			redirect('auth');
@@ -14,7 +12,9 @@ class C_data_donatur extends CI_Controller {
 		if ($this->session->userdata('level') =="member") {
 			redirect('auth');
 		}
-		$this->load->helper('text');
+		//load model
+		$this->load->model('admin/m_data_donatur'); 
+		// $this->load->helper('text');
 
 	}
 
@@ -23,11 +23,8 @@ class C_data_donatur extends CI_Controller {
 	public function index()
 	{
 		
-		if ($this->session->userdata('level') =="") {
-			
-			redirect('auth');
-		}
-		$data['username'] = $this->session->userdata('username');
+		
+		// $data['username'] = $this->session->userdata('username');
 		$data = array(
 
 			'title' 	=> 'Data Buku',
@@ -71,29 +68,42 @@ class C_data_donatur extends CI_Controller {
 
 	}
 
-	public function edit($id_buku)
+	// public function edit($uid)
+	// {
+	// 	$uid = $this->uri->segment(3);
+
+	// 	$data = array(
+
+	// 		'title' 	=> 'Edit Data donatur',
+	// 		'data_donatur' => $this->m_data_donatur->edit($uid)
+
+	// 	);
+
+	// 	$this->load->view('admin/data_donatur/edit', $data);
+	// }
+		public function edit($uid)
 	{
-		$id_buku = $this->uri->segment(3);
+		// $uid = $this->uri->segment(3);
 
 		$data = array(
 
-			'title' 	=> 'Edit Data Buku',
-			'data_buku' => $this->m_data_donatur->edit($id_buku)
+			// 'title' 	=> 'Edit Data Buku',
+			'data_donatur' => $this->m_data_donatur->edit($uid)
 
 		);
-
-		$this->load->view('edit_buku', $data);
+		// var_dump($data['data_donatur']);die;
+		$this->load->view('admin/data_donatur/edit', $data);
 	}
 
 	public function update()
 	{
-		$id['id'] = $this->input->post("id");
+		$id['uid'] = $this->input->post("uid");
 		$data = array(
 
-			'no_isbn' 			=> $this->input->post("no_isbn"),
-			'nama_buku' 		=> $this->input->post("nama_buku"),
-			'tanggal_terbit' 	=> $this->input->post("tanggal_terbit"),
-			'pengarang' 		=> $this->input->post("pengarang"),
+			'username' 			=> $this->input->post("username"),
+			'email' 		=> $this->input->post("email"),
+			'password' 	=> md5($this->input->post('password')),
+			'level' 	=> $this->input->post("level"),
 			
 		);
 
@@ -103,7 +113,7 @@ class C_data_donatur extends CI_Controller {
 			                                    </div>');
 
 		//redirect
-		redirect('buku/');
+		redirect('admin/c_data_donatur');
 
 	}
 

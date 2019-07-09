@@ -28,22 +28,12 @@ class M_pewakaf extends CI_Model
 		$this->db->where($data_kode);
 		$this->db->delete('pewakaf');
 	}
-	        public function get_data()
-        {
-                // $query = $this->db->get('barang');
-                // return $query->result();
 
-                $this->db->select('*');
-                 $this->db->from('wakaf');
-                 // $this->db->join('barang','barang.id_barang=belanja.barang_id');
-                 $query = $this->db->get();
-                 return $query->result();
-        }
-        public function get_barang()
-        {
-                 $this->db->from('wakaf');
-                 $query = $this->db->get();
-                 return $query->result();
-        }
+    public function get_barang()
+    {
+             $this->db->from('wakaf');
+             $query = $this->db->get();
+             return $query->result();
+    }
 }
 ?>

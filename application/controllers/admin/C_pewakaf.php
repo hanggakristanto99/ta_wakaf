@@ -17,12 +17,6 @@ class C_pewakaf extends CI_Controller
 	}
 
 	public function index() {
-		//login
-		if ($this->session->userdata('level') =="") {
-			
-			redirect('auth');
-		}
-		$data['username'] = $this->session->userdata('username');
 		// crud
 		$data['pewakaf']=$this->m_pewakaf->tampil_data();
 		$this->load->view('admin/pewakaf/main',$data);
@@ -35,8 +29,12 @@ class C_pewakaf extends CI_Controller
 		redirect('auth');
 	}
 
-	function i(){
-		$this->load->view('admin/pewakaf/input');
+	public function i(){
+		$jenis = json_encode($this->m_pewakaf->get_jenis());
+		$data = array(
+						'jenis' => $jenis, 
+		);
+		$this->load->view('admin/pewakaf/input', $data);
 	}
 	//==============================================
 	function input(){

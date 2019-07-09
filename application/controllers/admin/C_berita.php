@@ -16,7 +16,7 @@ class C_berita extends CI_Controller{
 
 	function index(){
 
-		$data['username'] = $this->session->userdata('username');
+		// $data['username'] = $this->session->userdata('username');
 		$data['berita']=$this->m_berita->tampil_data();
 		$this->load->view('admin/berita/main',$data);
 	}

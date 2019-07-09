@@ -7,7 +7,7 @@ $this->load->view('user/header');
 					<div class="col-md-2 col-sm-12 col-xs-12">
 						<!-- Logo -->
 						<div class="logo">
-							<a href="#">Admin</a>
+							<a href="auth">Admin</a>
 						</div>
 						<!--/ End Logo -->
 					</div>
@@ -26,10 +26,9 @@ $this->load->view('user/header');
 					<div class="col-md-2">
 						<!-- Social -->
 						<ul class="social">
-							<!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-envelope "></i></a></li>
-							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="https://www.facebook.com/wakaf.umat"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="mailto:yayasan.wakafin@gmail.com"><i class="fa fa-envelope "></i></a></li>
+							<li><a href="https://www.instagram.com/wakafin_wakaf_produktif/"><i class="fa fa-instagram"></i></a></li>
 						</ul>
 						<!--/ End Social -->
 					</div>
@@ -47,6 +46,7 @@ $this->load->view('user/header');
 						</div>
 					</div>
 				</div>
+				 <?php echo $this->session->flashdata('notif') ?>
 				<!-- Google Map -->
 				<div class="row">
 					<div class="col-md-12 col-sm-12 col-xs-12 wow fadeIn">

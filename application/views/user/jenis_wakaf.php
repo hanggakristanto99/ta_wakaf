@@ -72,7 +72,7 @@ $this->load->view('user/header');
   	<form class="form" method="post">
   		 <div class="form-group">
 		    <label for="text">Nama</label>
-		    <input type="text" name="nama" class="form-control" placeholder="Nama">
+		    <input type="text" name="nama" class="form-control" placeholder="Nama" required="required">
 		  </div>
 		<!-- <div class="form-group">
 			<label>Jenis Wakaf </label>
@@ -80,12 +80,13 @@ $this->load->view('user/header');
         </div> -->
         <div class="form-group">
             <label for="nama_barang">Jenis Wakaf</label>
-            <select class="form-control" name="jenis_wakaf" id="nama_barang" required>
+            <select class="form-control" name="jenis_wakaf" id="nama_barang"  required="required">
             </select>
           </div>
+
 		<div class="form-group">
 			<label>Nominal </label>
-			<input type="text" name="nominal" placeholder="nominal " required="required">
+			<input type="number" name="nominal" placeholder="Nominal " required="required">
         </div>
         <!-- <div class="form-group">
 			<label>Bank </label>
@@ -94,7 +95,7 @@ $this->load->view('user/header');
         <div class="form-group">
 	      <label>Transfer ke Bank </label>
 	      <select name="bank" class="form-control" required>
-	        <option value="">Pilih Bank</option>
+	        <option>Pilih Bank</option>
 	        <option>BNI 7070705980 an.kitawakaf</option>
 	        <option>BCA 3560705964 an.kitawakaf</option>
 	        <option>BRI 9830705937 an.kitawakaf</option>

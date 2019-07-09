@@ -1,3 +1,4 @@
+
 <?php 
   $this->load->view('header')
 ?>
@@ -37,27 +38,33 @@
         						<form>
         						  <div class="form-group">
         							    <label for="text">Nama</label>
-        							    <input type="text" name="nama" class="form-control" placeholder="Nama">
+        							    <input type="text" name="nama" class="form-control" placeholder="Nama" required="required">
         							  </div>
+
                         <div class="form-group">
-                          <label for="text">Jenis Wakaf</label>
-                          <input type="text" name="jenis_wakaf" class="form-control" placeholder="Jenis Wakaf">
+                          <label>Jenis Wakaff</label>
+                          <select class="form-control" name="jenis_wakaf" id="jenis_pewakaf"  required>
+                             </select>
                         </div>
 
         							  <div class="form-group">
         							    <label for="text">Nominal</label>
-                          <input type="text" name="nominal" class="form-control" placeholder="Nominal">
-        							    <!-- <textarea class="form-control rounded-0" name="nominal"  placeholder="Nominal"></textarea> -->
+                          <input type="number" name="nominal" class="form-control" placeholder="Nominal" required="required">
         							  </div>
 
         							  <div class="form-group">
-        							    <label for="text">Jenis Transfer</label>
-        							    <input type="text" name="bank" class="form-control" >
-        							  </div>
+                          <label>Transfer ke Bank </label>
+                          <select name="bank" class="form-control" required>
+                            <option>Pilih Bank</option>
+                            <option>BNI 7070705980 an.kitawakaf</option>
+                            <option>BCA 3560705964 an.kitawakaf</option>
+                            <option>BRI 9830705937 an.kitawakaf</option>
+                          </select>
+                        </div>
 
         							  <div class="form-group">
-        							    <label for="text">Foto</label>
-        							    <input type="file" name="gambar" class="form-control" >
+        							    <label for="text">Foto Bukti Transfer</label>
+        							    <input type="file" name="gambar" class="form-control"  required="required">
         							  </div>
 
         						<button type="submit" class="btn btn-md btn-success">Simpan</button>
@@ -80,6 +87,20 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+
 <?php 
   $this->load->view('footer')
 ?>
+
+  <script type="text/javascript"> 
+      var string = "";
+      var result = <?= $jenis; ?>;
+       // console.log(result);
+
+      string += "<option> Pilih Jenis Wakaf </option>";
+      for(value in result){
+        string += "<option>"+ result[value].judul +"</option>";
+      }
+      jenis_pewakaf.innerHTML = string;
+        
+  </script>

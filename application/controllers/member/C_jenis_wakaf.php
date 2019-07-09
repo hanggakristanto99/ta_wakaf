@@ -9,19 +9,18 @@ class C_jenis_wakaf extends CI_Controller {
 		$this->load->helper('text');
 	}
 	public function index() {
-		if ($this->session->userdata('level')=="") {
-			redirect('auth');
-		}
+		// if ($this->session->userdata('level')=="") {
+		// 	redirect('auth');
+		// }
 
 		//drop
-		$belanja = json_encode($this->m_pewakaf->get_data());
+		// $belanja = json_encode($this->m_pewakaf->get_data());
 		$barang = json_encode($this->m_pewakaf->get_barang());
-
 		$data = array(
 						'barang' => $barang, 
 		);
 
-		$data['username'] = $this->session->userdata('username');
+		// $data['username'] = $this->session->userdata('username');
 		$this->load->view('user/jenis_wakaf', $data);
 	}
 

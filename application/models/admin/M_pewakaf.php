@@ -31,5 +31,12 @@ class M_pewakaf extends CI_Model
 		$this->db->where($data_kode);
 		$this->db->delete('pewakaf');
 	}
+
+    public function get_jenis()
+    {
+             $this->db->from('wakaf');
+             $query = $this->db->get();
+             return $query->result();
+    }
 }
 ?>

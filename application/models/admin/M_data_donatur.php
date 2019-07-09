@@ -26,11 +26,11 @@ class M_data_donatur extends CI_model{
 
 	}
 
-	public function edit($id_buku)
+	public function edit($uid)
 	{
 		
-		$query = $this->db->where("id_buku", $id_buku)
-				->get("tbl_buku");
+		$query = $this->db->where("uid", $uid)
+				->get("login_session");
 
 		if($query){
 			return $query->row();
@@ -43,7 +43,7 @@ class M_data_donatur extends CI_model{
 	public function update($data, $uid)
 	{
 		
-		$query = $this->db->update("tbl_buku", $data, $uid);
+		$query = $this->db->update("login_session", $data, $uid);
 
 		if($query){
 			return true;
@@ -53,10 +53,10 @@ class M_data_donatur extends CI_model{
 
 	}
 
-	public function hapus($uid)
+	public function hapus($id)
 	{
 		
-		$query = $this->db->delete("login_session", $uid);
+		$query = $this->db->delete("login_session", $id);
 
 		if($query){
 			return true;

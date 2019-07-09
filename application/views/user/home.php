@@ -48,9 +48,9 @@ $this->load->view('user/header');
 						<!-- Social -->
 						<ul class="social">
 							<!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
-							<li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="mailto:kitawakaf@gmail.com"><i class="fa fa-envelope "></i></a></li>
-							<li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="https://www.facebook.com/wakaf.umat"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="mailto:yayasan.wakafin@gmail.com"><i class="fa fa-envelope "></i></a></li>
+							<li><a href="https://www.instagram.com/wakafin_wakaf_produktif/"><i class="fa fa-instagram"></i></a></li>
 						</ul>
 						<!--/ End Social -->
 					</div>
@@ -408,7 +408,7 @@ $this->load->view('user/header');
 								</a>
 								<div class="text">
 									<h4><a href="<?php echo base_url() ?>member/c_berita/e/<?php echo $row->id ?>"><?php echo $row->judul;?></a></h4>
-									<p><?php echo date("d F Y", strtotime($row->tgl));?></p>
+									<p class="fa fa-calendar">  <?php echo date("d F Y", strtotime($row->tgl));?></p>
 								</div>
 							</div>
 							<!--/ End Portfolio -->
@@ -452,7 +452,7 @@ $this->load->view('user/header');
 								</a>
 								<div class="text">
 									<h4><a href="<?php echo base_url() ?>member/c_wakaf/e/<?php echo $row->id ?>"><?php echo $row->judul;?></a></h4>
-									<p><?php echo date("d F Y", strtotime($row->tgl));?></p>
+									<p class="fa fa-calendar">  <?php echo date("d F Y", strtotime($row->tgl));?></p>
 								</div>
 							</div>
 							<!--/ End Portfolio -->

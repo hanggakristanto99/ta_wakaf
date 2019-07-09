@@ -1,22 +1,92 @@
-<!DOCTYPE html>
-<html>
-<title>Belajar CI</title>
-<body>
-
-<h1>Edit Data</h1>
 <?php 
-foreach($data_wakaf as $row){
-echo form_open_multipart('admin/c_data_donatur/edit');?>
-nama <input type="text" name="nama" value="<?php echo $row->nama;?>"><br><br>
-email <input type="text" name="email" value="<?php echo $row->email;?>"><br><br>
-telpon <input type="text" name="telpon" value="<?php echo $row->telpon;?>"><br><br>
-password <input type="text" name="password" value="<?php echo $row->password;?>"><br><br>
-<br>
-
-<input type="hidden" name="id" value="<?php echo $row->id;?>">
-<button type="submit">Edit</button>
-<?php echo form_close();
-}
+  $this->load->view('header')
 ?>
-</body>
-</html>
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+        <li><a href="<?php echo base_url() ?>admin/c_home"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="<?php echo base_url() ?>admin/c_wakaf"><i class="fa fa-circle-o"></i> Wakaf</a></li>
+        <li><a href="<?php echo base_url() ?>admin/c_berita"><i class="fa fa-circle-o"></i> Berita</a></li>
+        <li class="active"><a href="<?php echo base_url() ?>admin/c_data_donatur"><i class="fa fa-circle-o"></i> Data Donatur</a></li>
+        <li><a href="<?php echo base_url() ?>admin/c_pewakaf"><i class="fa fa-circle-o"></i> Data Pewakaf</a></li>
+        <li><a href="<?php echo site_url('admin/c_admin/logout'); ?>"><i class="fa fa-circle-o"></i> Logout</a></li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Data Donatur
+      </h1>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <!-- /.box-header -->
+            <div class="box-body">
+        				<div class="row">
+        					<div class="col-md-12">
+        							<?php echo form_open('admin/c_data_donatur/update') ?>
+        						<form>
+        						  <div class="form-group">
+        							    <label for="text">Username / Email</label>
+        							    <input type="email" name="username" class="form-control"  value="<?php echo $data_donatur->username ?>">
+        							    <input type="hidden" value="<?php echo $data_donatur->uid ?>" name="uid">
+        							  </div>
+
+        							  <div class="form-group">
+        							    <label for="text">Nama</label>
+        							    <input type="text" name="email" class="form-control"  value="<?php echo $data_donatur->email ?>">
+        							    <input type="hidden" value="<?php echo $data_donatur->uid ?>" name="uid">
+        							  </div>
+
+        							  <div class="form-group">
+        							    <label for="date">Password</label>
+        							    <input type="password" name="password" class="form-control"  value="<?php echo $data_donatur->password ?>">
+        							    <input type="hidden" value="<?php echo $data_donatur->uid ?>" name="uid">
+        							  </div>
+
+        							  <div class="form-group">
+        							    <label for="text">Level</label>
+        							    <input type="text" name="level" class="form-control"  value="<?php echo $data_donatur->level ?>" readonly>
+        							    <input type="hidden" value="<?php echo $data_donatur->uid ?>" name="uid">
+        							  </div>
+
+        							  
+        							  <!-- <input type="hidden" name="id" value="<?php echo $row->id;?>"> -->
+        						<button type="submit" class="btn btn-md btn-success">Simpan</button>
+        					  <button type="reset" class="btn btn-md btn-warning">reset</button>
+        						</form>
+        					<?php echo form_close(); ?>
+        					</div>
+        				</div>
+          <!-- /.box -->
+            </div>
+
+
+
+
+
+
+
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+<?php 
+  $this->load->view('footer')
+?>
