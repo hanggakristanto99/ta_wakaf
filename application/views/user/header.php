@@ -69,18 +69,17 @@
 			</a>
 		</div> -->
 				<!-- Mp Color -->
-		<div class="mp-color">
+<!-- 		<div class="mp-color">
 			<div class="icon inOut"><i class="fa fa-cog fa-whatsapp "></i></div>
 			<h4>Hubungi Admin</h4>
 			<h4>Melalui Whatsapp?</h4>
 			<ul>
-				<li><a href="https://wa.me/628561333111?text=Assalamualaikum,%20saya%20ingin%20berwakaf%20..." target="_blank" ><img style="width: 100px; height: 100px;display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;" src="http://www.jagatreview.com/wp-content/uploads/2013/04/whatsapp-logo.png?w=640" alt="..." class="rounded-circle"></a></li>
-				<!-- <li><a href="">melalui wa</a></li> -->
+			<li><a href="https://wa.me/628561333111?text=Assalamualaikum,%20saya%20ingin%20berwakaf%20..." target="_blank" ><img style="width: 100px; height: 100px;display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;" src="http://www.jagatreview.com/wp-content/uploads/2013/04/whatsapp-logo.png?w=640" alt="..." class="rounded-circle"></a></li>
 			</ul>
-		</div>
+		</div> -->
 		<!--/ ENd Mp Color -->
 		<!-- Start Header -->
 
