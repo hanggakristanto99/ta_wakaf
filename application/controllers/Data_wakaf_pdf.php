@@ -24,7 +24,7 @@ Class Data_wakaf_pdf extends CI_Controller{
         $pdf->Cell(40,6,'Nama',1,0,'C');
         $pdf->Cell(70,6,'Jenis Wakaf',1,0,'C');
         $pdf->Cell(25,6,'Nominal',1,0,'C');
-        $pdf->Cell(44,6,'Bank',1,1,'C');
+        $pdf->Cell(50,6,'Bank',1,1,'C');
         $pdf->SetFont('Arial','',10);
         $pewakaf = $this->db->get('pewakaf')->result();
         $no = 1; 
@@ -34,7 +34,7 @@ Class Data_wakaf_pdf extends CI_Controller{
             $pdf->Cell(40,6,$row->nama,1,0);
             $pdf->Cell(70,6,$row->jenis_wakaf,1,0);
             $pdf->Cell(25,6,$row->nominal,1,0);
-            $pdf->Cell(44,6,$row->bank,1,1);  
+            $pdf->Cell(50,6,$row->bank,1,1);  
         }
         $pdf->Output();
     }

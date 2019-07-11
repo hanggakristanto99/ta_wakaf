@@ -73,7 +73,7 @@ $this->load->view('user/header');
 	        $no = 1; 
 	        foreach($wakaf as $row){ 
 	      ?>
-		  <div class="col-xs-6 col-md-4">
+		  <div class="col-xs-12 col-md-4">
 		  	<form class="form" >
 				<div class="text-center">
 				<p>kami ucapkan terima kasih atas nama <br><h1><?php echo $row->nama;?></h1></p>  

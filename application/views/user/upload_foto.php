@@ -67,7 +67,7 @@ $this->load->view('user/header');
 				</div><br>
 			<div class="row row-no-gutters">
 		  <div class="col-xs-6 col-md-4"> </div>
-		  <div class="col-xs-6 col-md-4">
+		  <div class="col-xs-12 col-md-4">
 		<div class="container">
 	
 		                  							<?php 
@@ -93,7 +93,7 @@ $this->load->view('user/header');
 
         							  <div class="form-group col-md-4">
 											Klik Tombol "Choose File" Untuk Memilih Bukti Transfer <h1></h1><input type="file" name="gambar" class="form-control" required>
-        							  </div><br><h1></h1>
+        							  </div><br><br><h1></h1>
         							  <input type="hidden" name="id" value="<?php echo $row->id;?>">
         							  <button type="submit" class="btn btn-primary">Kirim</button>
         						</form><br>

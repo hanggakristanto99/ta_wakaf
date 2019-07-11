@@ -81,7 +81,7 @@ $this->load->view('user/header');
 			</div>
 			<div class="row row-no-gutters">
   <div class="col-xs-6 col-md-4"> </div>
-  <div class="col-xs-6 col-md-4">
+  <div class="col-xs-12 col-md-4">
   	<?php echo form_open("member/c_halaman_login/cek_login"); ?>
   	<form class="form" method="post" >
 							<div class="form-group">

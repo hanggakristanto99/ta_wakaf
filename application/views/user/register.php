@@ -68,7 +68,7 @@ $this->load->view('user/header');
 				<!-- Google Map -->
 			<div class="row row-no-gutters">
   <div class="col-xs-6 col-md-4"> </div>
-  <div class="col-xs-6 col-md-4">
+  <div class="col-xs-12 col-md-4">
   	<?php echo form_open_multipart('member/c_register/simpan') ?>
 		<form>
 			<div class="form-group">

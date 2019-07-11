@@ -67,7 +67,7 @@ $this->load->view('user/header');
 				</div><br>
 	<div class="row row-no-gutters">
   <!-- <div class="col-xs-6 col-md-4"> </div> -->
-  <div class="col-xs-6 col-md-4">
+  <div class="col-xs-12 col-md-4">
 		<div class="container">
 			<div class="text-center">
 							<!-- <h2> <span>Upload Foto Berhasil</span></h2><br> -->
