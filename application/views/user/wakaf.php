@@ -89,9 +89,12 @@ $this->load->view('user/header');
 											<div class="meta">
 												<span><i class="fa fa-calendar"></i><?php echo date("d F Y", strtotime($row->tgl));?></span>
 											</div>
-											<!-- <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis.</p> -->
-											<a href="<?php echo base_url() ?>member/c_wakaf/e/<?php echo $row->id ?>" class="btn btn-sm btn-success text-center">Read More <i class="fa fa-angle-double-right"></i></a>
+
 										</div>
+										<div class="text-center">
+											
+										<a href="<?php echo base_url() ?>member/c_wakaf/e/<?php echo $row->id ?>" class="btn btn-primary btn-sm text-center" role="button">Wakaf Sekarang</a>
+										</div><br>
 									</div>	
 									<!--/ End Single blog -->
 								</div>

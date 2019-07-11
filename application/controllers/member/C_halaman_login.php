@@ -8,6 +8,12 @@ class c_halaman_login extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('user/m_halaman_login');
+		// if ($this->session->userdata('level')=="") {
+		// 	redirect('member/c_jenis_wakaf');
+		// }
+		if ($this->session->userdata('level') =="member") {
+			redirect('member/c_jenis_wakaf');
+		}
 		
 	}
 

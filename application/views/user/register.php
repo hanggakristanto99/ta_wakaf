@@ -46,7 +46,7 @@ $this->load->view('user/header');
 						<ul class="social">
 							<!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
 							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-envelope "></i></a></li>
+							<li><a href="https://wa.me/628561333111?text=Assalamualaikum,%20saya%20ingin%20berwakaf%20..."><i class="fa fa-whatsapp "></i></a></li>
 							<li><a href="#"><i class="fa fa-instagram"></i></a></li>
 						</ul>
 						<!--/ End Social -->

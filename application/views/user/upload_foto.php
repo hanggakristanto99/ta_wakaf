@@ -61,7 +61,7 @@ $this->load->view('user/header');
 				<div class="row">
 					<div class="col-md-12 col-sm-12 col-xs-12 wow fadeIn">
 						<div class="section-title center">
-							<h2> <span>Upload foto</span></h2><br>
+							<h2> <span>Upload Bukti Transfer</span></h2><br>
 						</div>
 					</div>
 				</div><br>
@@ -92,7 +92,7 @@ $this->load->view('user/header');
 			                        </div>
 
         							  <div class="form-group col-md-4">
-											Klik Tombol "Choose File" Untuk Memilih Gambar <h1></h1><input type="file" name="gambar" class="form-control" required>
+											Klik Tombol "Choose File" Untuk Memilih Bukti Transfer <h1></h1><input type="file" name="gambar" class="form-control" required>
         							  </div><br><h1></h1>
         							  <input type="hidden" name="id" value="<?php echo $row->id;?>">
         							  <button type="submit" class="btn btn-primary">Kirim</button>

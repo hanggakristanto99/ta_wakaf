@@ -9,9 +9,10 @@ class M_upload_foto extends CI_Model
 	}
 	//======================================
 	function tampil_data(){
+		$this->db->limit(1);
 		$hasil = $this->db->select("*")
 				 ->from('pewakaf')
-				 ->order_by('id', 'DESC')
+				 ->order_by('id', 'ASC')
 				 ->get();
 		return $hasil->result();
 	}
