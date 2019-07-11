@@ -71,16 +71,16 @@ $this->load->view('user/header');
 					<div class="col-md-4 col-sm-4 col-xs-12 wow fadeIn" data-wow-delay="0.4s">
 						<!-- Single Address -->
 						<div class="single-address">
-							<a href="https://wa.me/628561333111?text=Assalamualaikum,%20saya%20ingin%20berwakaf%20...">
+							<a href="https://wa.me/6289638429017?text=Assalamualaikum,%20saya%20ingin%20berwakaf%20...">
 								
 							<i class="fa fa-whatsapp"></i>
 							</a>
-							<a href="https://wa.me/628561333111?text=Assalamualaikum,%20saya%20ingin%20berwakaf%20...">
+							<a href="https://wa.me/6289638429017?text=Assalamualaikum,%20saya%20ingin%20berwakaf%20...">
 								
 							<h4>Whatsapp</h4>
 							</a>
-							<a href="https://wa.me/628561333111?text=Assalamualaikum,%20saya%20ingin%20berwakaf%20...">
-							<p>+8801812345678</p>
+							<a href="https://wa.me/6289638429017?text=Assalamualaikum,%20saya%20ingin%20berwakaf%20...">
+							<p>+6289638429017</p>
 								
 							</a>
 						</div>
@@ -107,15 +107,15 @@ $this->load->view('user/header');
 					<div class="col-md-4 col-sm-4 col-xs-12 wow fadeIn" data-wow-delay="0.8s">
 						<!-- Single Address -->
 						<div class="single-address">
-							<a href="callto:5551234567">
+							<a href="tel:089-638-429-017">
 							<i class="fa fa-phone"></i>
 							</a>															
-							<a href="callto:5551234567">
+							<a href="tel:089-638-429-017">
 								
 							<h4>Phone</h4>
 							</a>
-							<a href="callto:5551234567">
-							<p>(555)123-4567</p>
+							<a href="tel:089-638-429-017">
+							<p>(089)638-429-017</p>
 								
 							</a>
 						</div>
