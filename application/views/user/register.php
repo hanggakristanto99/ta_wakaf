@@ -92,26 +92,6 @@ $this->load->view('user/header');
             </div>
 		</form>
 		<?php echo form_close() ?>
-<!-- 				<?php echo form_open_multipart('admin/c_data_donatur/simpan') ?>
-        						<form>
-        						  <div class="form-group">
-        							    <label for="text">Username</label>
-        							    <input type="text" name="username" class="form-control" placeholder="Nama">
-        							  </div>
-
-        							  <div class="form-group">
-        							    <label for="text">Password</label>
-        							    <input type="text" name="password" class="form-control" placeholder="Password">
-        							  </div>
-
-        							  <div class="form-group">
-        							    <label for="text">Level</label>
-        							    <input type="text" name="level" value="member" readonly class="form-control" >
-        							  </div>
-        						<button type="submit" class="btn btn-md btn-success">Simpan</button>
-        					  <button type="reset" class="btn btn-md btn-warning">reset</button>
-        						</form>
-        					<?php echo form_close() ?> -->
 
   </div>
   <div class="col-xs-6 col-md-4"> </div>

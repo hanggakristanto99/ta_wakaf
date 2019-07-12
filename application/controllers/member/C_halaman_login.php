@@ -42,6 +42,7 @@ class c_halaman_login extends CI_Controller {
 				$sess_data['logged_in'] = 'Sudah Loggin';
 				$sess_data['uid'] = $sess->uid;
 				$sess_data['username'] = $sess->username;
+				$sess_data['email'] = $sess->email;
 				$sess_data['level'] = $sess->level;
 				$this->session->set_userdata($sess_data);
 			}

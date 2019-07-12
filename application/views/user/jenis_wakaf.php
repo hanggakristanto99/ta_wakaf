@@ -69,10 +69,13 @@ $this->load->view('user/header');
   <div class="col-xs-6 col-md-4"> </div>
   <div class="col-xs-12 col-md-4">
   	<?php echo form_open_multipart('member/c_jenis_wakaf/input') ?>
+
+
+
   	<form class="form" method="post">
   		 <div class="form-group">
 		    <label for="text">Nama</label>
-		    <input type="text" name="nama" class="form-control" placeholder="Nama" required="required">
+		    <input type="text" name="nama" class="form-control" value="<?= $this->session->userdata('email') ?> " required="required">
 		  </div>
 		<!-- <div class="form-group">
 			<label>Jenis Wakaf </label>

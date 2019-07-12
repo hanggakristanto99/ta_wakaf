@@ -12,6 +12,13 @@ class M_pewakaf extends CI_Model
 		$hasil = $this->db->get('pewakaf')->result();
 		return $hasil;
 	}
+	function tampil_data_pewakaf(){
+		$hasil = $this->db->select("*")
+				 ->from('wakaf')
+				 ->order_by('id', 'DESC')
+				 ->get();
+		return $hasil->result();
+	}
 	//======================================
 	function cari_data($data_kode){
 		$this->db->where($data_kode);
