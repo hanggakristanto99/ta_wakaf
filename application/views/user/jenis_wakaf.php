@@ -57,6 +57,7 @@ $this->load->view('user/header');
 		<!--/ End Header -->
 				<!-- Contact Us -->
 		<section id="contact" class="section">
+			<?php echo $this->session->flashdata('notif') ?>
 			<div class="container ">
 				<div class="row">
 					<div class="col-md-12 col-sm-12 col-xs-12 wow fadeIn">
@@ -77,10 +78,6 @@ $this->load->view('user/header');
 		    <label for="text">Nama</label>
 		    <input type="text" name="nama" class="form-control" value="<?= $this->session->userdata('email') ?> " required="required">
 		  </div>
-		<!-- <div class="form-group">
-			<label>Jenis Wakaf </label>
-			<input type="text" readonly name="jenis_wakaf" value="sawah" required="required">
-        </div> -->
         <div class="form-group">
             <label for="nama_barang">Jenis Wakaf</label>
             <select class="form-control" name="jenis_wakaf" id="nama_barang"  required="required">
@@ -89,12 +86,8 @@ $this->load->view('user/header');
 
 		<div class="form-group">
 			<label>Nominal </label>
-			<input type="number" name="nominal" placeholder="Nominal " required="required">
+			<input type="text"  name="nominal" placeholder="Nominal " required="required">
         </div>
-        <!-- <div class="form-group">
-			<label>Bank </label>
-			<input type="text" name="bank" value="BNI" readonly required="required">
-        </div> -->
         <div class="form-group">
 	      <label>Transfer ke Bank </label>
 	      <select name="bank" class="form-control" required>
@@ -135,4 +128,31 @@ $this->load->view('user/footer');
       
       
         
+  </script>
+  <script type="text/javascript">
+  	var rupiah = document.getElementById("rupiah");
+rupiah.addEventListener("keyup", function(e) {
+  // tambahkan 'Rp.' pada saat form di ketik
+  // gunakan fungsi formatRupiah() untuk mengubah angka yang di ketik menjadi format angka
+  rupiah.value = formatRupiah(this.value, "Rp. ");
+});
+
+/* Fungsi formatRupiah */
+function formatRupiah(angka, prefix) {
+  var number_string = angka.replace(/[^,\d]/g, "").toString(),
+    split = number_string.split(","),
+    sisa = split[0].length % 3,
+    rupiah = split[0].substr(0, sisa),
+    ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+  // tambahkan titik jika yang di input sudah menjadi angka ribuan
+  if (ribuan) {
+    separator = sisa ? "." : "";
+    rupiah += separator + ribuan.join(".");
+  }
+
+  rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
+  return prefix == undefined ? rupiah : rupiah ? "Rp. " + rupiah : "";
+}
+
   </script>

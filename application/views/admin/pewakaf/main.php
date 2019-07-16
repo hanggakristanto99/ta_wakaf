@@ -64,7 +64,7 @@
               <td><?php echo $no++?></td>
           <td><?php echo $row->nama;?></td>
           <td><?php echo $row->jenis_wakaf;?></td>
-          <td><?php echo $row->nominal;?></td>
+          <td><?php echo 'Rp. '.number_format($row->nominal);?></td>
           <td><?php echo $row->bank;?></td>
           <td>
           <?php if($row->gambar==''){}else{?>

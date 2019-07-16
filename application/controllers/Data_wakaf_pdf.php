@@ -33,7 +33,7 @@ Class Data_wakaf_pdf extends CI_Controller{
             $pdf->Cell(9,6,$no++,1,0);
             $pdf->Cell(40,6,$row->nama,1,0);
             $pdf->Cell(70,6,$row->jenis_wakaf,1,0);
-            $pdf->Cell(25,6,$row->nominal,1,0);
+            $pdf->Cell(25,6,'Rp. '.number_format($row->nominal),1,0);
             $pdf->Cell(50,6,$row->bank,1,1);  
         }
         $pdf->Output();

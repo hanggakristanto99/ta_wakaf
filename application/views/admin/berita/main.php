@@ -64,7 +64,7 @@
           <td><?php echo $row->judul;?></td>
           <td><?php echo $row->artikel;?></td>
           <td><?php echo date("d F Y", strtotime($row->tgl));?></td>
-          <td>
+          <td style="height: 100px; width: 100px">
           <?php if($row->gambar==''){}else{?>
 
 

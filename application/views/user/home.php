@@ -358,7 +358,7 @@ $this->load->view('user/header');
 							<!-- Single Testimonial -->
 							<div class="single-testimonial">
 								<div class="testimonial-content">
-									<p> Wakaf ibaratkan berbisnis dengan Allah untuk akhirat nanti. Seperti yang dikatakan Ust. Wahyu “Dengan berwakaf ini kita sedang bertransaksi dengan Allah. Sedang membeli kavling di surga” </p>
+									<p> Wakaf ibaratkan berbisnis dengan Allah untuk akhirat nanti. “Dengan berwakaf ini kita sedang bertransaksi dengan Allah. Sedang membeli kavling di surga” </p>
 								</div>
 								<div class="testimonial-info">
 									<div class="img">

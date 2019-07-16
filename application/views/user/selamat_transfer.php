@@ -77,7 +77,7 @@ $this->load->view('user/header');
 		  	<form class="form" >
 				<div class="text-center">
 				<p>kami ucapkan terima kasih atas nama <br><h1><?php echo $row->nama;?></h1></p>  
-				<p>telah melakukan donasi untuk program ini. <br> Donasi Anda sebesar :<br>  <h1>Rp. <?php echo $row->nominal;?></h1></p>
+				<p>telah melakukan donasi untuk program ini. <br> Donasi Anda sebesar :<br>  <h1><?php echo $row->nominal;?></h1></p>
 				<p>Silahkan untuk mentransfer ke Bank dibawah ini :</p> <p> <h1></h1></p>
 				<h3><?php echo $row->bank;?></h3>
 				<p>Klik tombol "Selanjutnya" untuk mengirim bukti transfer</p><br>
